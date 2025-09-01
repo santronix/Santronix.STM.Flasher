@@ -22,6 +22,6 @@ The DUT port is the COM port selected on the utility.
 **Step 4: Loop**
 If you wish to execute the testplan once, just deselect the "Loop Enabled". To execute the testplan in loop for e.g., 100 times, just select "Loop Enabled" and enter the number of loops to be exeucted. When loops are exeucted, the total number of loops, Passed and failed are updated after each loop execution.
 
-_The Log windows displayes the Log in real time and can be exported by "Export" button and can be cleared using "clear Log" button _
+_The Log windows displayes the Log in real time and can be exported by "Export" button and can be cleared using "clear Log" button_
 
 The cycle time and Total execution time is also displayed on the top right corner in HH:MM:SS
