@@ -1,0 +1,22 @@
+<Tesplan>
+	<TestActivity>
+		<Id>1</Id>
+		<Name>CheckCLIVersion</Name>
+		<Command>STM32_Programmer_CLI --version</Command>
+	</TestActivity>
+	<TestActivity>
+		<Id>2</Id>
+		<Name>GetOptionBytes</Name>
+		<Command>STM32_Programmer_CLI -c port={selectedPort} -ob displ</Command>
+	</TestActivity>
+	<TestActivity>
+		<Id>3</Id>
+		<Name>SetOptionBytes</Name>
+		<Command>STM32_Programmer_CLI -c port={selectedPort} -ob nBOOT0=0</Command>
+	</TestActivity>
+	<TestActivity>
+		<Id>4</Id>
+		<Name>FlashAndVerify</Name>
+		<Command>STM32_Programmer_CLI -c port={selectedPort} -d {flashFile} -v</Command>
+	</TestActivity>
+</Tesplan>
