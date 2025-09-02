@@ -25,3 +25,8 @@ If you wish to execute the testplan once, just deselect the "Loop Enabled". To e
 _The Log windows displayes the Log in real time and can be exported by "Export" button and can be cleared using "clear Log" button_
 
 The cycle time and Total execution time is also displayed on the top right corner in HH:MM:SS
+
+The below screenshot displays the entire flashing status on Single UI screen
+
+<img width="1510" height="771" alt="Screenshot 2025-09-02 at 5 15 23 PM" src="https://github.com/user-attachments/assets/06e93dad-aa2f-441f-b539-898590ef69e9" />
+
