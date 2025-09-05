@@ -59,13 +59,15 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.creditsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.comboBoxFlasherType = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelPort
             // 
             this.labelPort.AutoSize = true;
-            this.labelPort.Location = new System.Drawing.Point(40, 255);
+            this.labelPort.Location = new System.Drawing.Point(34, 273);
             this.labelPort.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelPort.Name = "labelPort";
             this.labelPort.Size = new System.Drawing.Size(118, 25);
@@ -75,16 +77,16 @@
             // comboBoxPort
             // 
             this.comboBoxPort.FormattingEnabled = true;
-            this.comboBoxPort.Location = new System.Drawing.Point(164, 253);
-            this.comboBoxPort.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBoxPort.Location = new System.Drawing.Point(162, 267);
+            this.comboBoxPort.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBoxPort.Name = "comboBoxPort";
             this.comboBoxPort.Size = new System.Drawing.Size(340, 33);
             this.comboBoxPort.TabIndex = 1;
             // 
             // buttonScanPort
             // 
-            this.buttonScanPort.Location = new System.Drawing.Point(526, 248);
-            this.buttonScanPort.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonScanPort.Location = new System.Drawing.Point(524, 262);
+            this.buttonScanPort.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonScanPort.Name = "buttonScanPort";
             this.buttonScanPort.Size = new System.Drawing.Size(84, 48);
             this.buttonScanPort.TabIndex = 2;
@@ -96,19 +98,19 @@
             // 
             this.textBoxLog.BackColor = System.Drawing.SystemColors.WindowText;
             this.textBoxLog.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.textBoxLog.Location = new System.Drawing.Point(38, 511);
+            this.textBoxLog.Location = new System.Drawing.Point(40, 531);
             this.textBoxLog.Margin = new System.Windows.Forms.Padding(4, 4, 10, 10);
             this.textBoxLog.Multiline = true;
             this.textBoxLog.Name = "textBoxLog";
             this.textBoxLog.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBoxLog.Size = new System.Drawing.Size(2166, 674);
+            this.textBoxLog.Size = new System.Drawing.Size(2221, 714);
             this.textBoxLog.TabIndex = 3;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(44, 461);
+            this.label1.Location = new System.Drawing.Point(42, 475);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(65, 25);
@@ -117,8 +119,8 @@
             // 
             // buttonFlash
             // 
-            this.buttonFlash.Location = new System.Drawing.Point(164, 382);
-            this.buttonFlash.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonFlash.Location = new System.Drawing.Point(162, 396);
+            this.buttonFlash.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonFlash.Name = "buttonFlash";
             this.buttonFlash.Size = new System.Drawing.Size(178, 54);
             this.buttonFlash.TabIndex = 5;
@@ -130,7 +132,7 @@
             // 
             this.labelCycle.AutoSize = true;
             this.labelCycle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCycle.Location = new System.Drawing.Point(1748, 118);
+            this.labelCycle.Location = new System.Drawing.Point(1748, 117);
             this.labelCycle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelCycle.Name = "labelCycle";
             this.labelCycle.Size = new System.Drawing.Size(293, 37);
@@ -140,8 +142,8 @@
             // checkBoxLoop
             // 
             this.checkBoxLoop.AutoSize = true;
-            this.checkBoxLoop.Location = new System.Drawing.Point(744, 257);
-            this.checkBoxLoop.Margin = new System.Windows.Forms.Padding(4);
+            this.checkBoxLoop.Location = new System.Drawing.Point(742, 271);
+            this.checkBoxLoop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkBoxLoop.Name = "checkBoxLoop";
             this.checkBoxLoop.Size = new System.Drawing.Size(177, 29);
             this.checkBoxLoop.TabIndex = 7;
@@ -152,7 +154,7 @@
             // labelLoopCount
             // 
             this.labelLoopCount.AutoSize = true;
-            this.labelLoopCount.Location = new System.Drawing.Point(740, 328);
+            this.labelLoopCount.Location = new System.Drawing.Point(738, 342);
             this.labelLoopCount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelLoopCount.Name = "labelLoopCount";
             this.labelLoopCount.Size = new System.Drawing.Size(141, 25);
@@ -163,8 +165,8 @@
             // textBoxLoopCount
             // 
             this.textBoxLoopCount.Enabled = false;
-            this.textBoxLoopCount.Location = new System.Drawing.Point(889, 322);
-            this.textBoxLoopCount.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxLoopCount.Location = new System.Drawing.Point(886, 335);
+            this.textBoxLoopCount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxLoopCount.Name = "textBoxLoopCount";
             this.textBoxLoopCount.Size = new System.Drawing.Size(196, 31);
             this.textBoxLoopCount.TabIndex = 9;
@@ -175,7 +177,7 @@
             // 
             this.labelLoopExecuted.AutoSize = true;
             this.labelLoopExecuted.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLoopExecuted.Location = new System.Drawing.Point(739, 391);
+            this.labelLoopExecuted.Location = new System.Drawing.Point(738, 404);
             this.labelLoopExecuted.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelLoopExecuted.Name = "labelLoopExecuted";
             this.labelLoopExecuted.Size = new System.Drawing.Size(248, 31);
@@ -197,8 +199,8 @@
             // buttonStop
             // 
             this.buttonStop.Enabled = false;
-            this.buttonStop.Location = new System.Drawing.Point(382, 382);
-            this.buttonStop.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonStop.Location = new System.Drawing.Point(380, 396);
+            this.buttonStop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonStop.Name = "buttonStop";
             this.buttonStop.Size = new System.Drawing.Size(178, 54);
             this.buttonStop.TabIndex = 12;
@@ -208,8 +210,8 @@
             // 
             // progressBarFlash
             // 
-            this.progressBarFlash.Location = new System.Drawing.Point(866, 455);
-            this.progressBarFlash.Margin = new System.Windows.Forms.Padding(4);
+            this.progressBarFlash.Location = new System.Drawing.Point(864, 469);
+            this.progressBarFlash.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.progressBarFlash.Name = "progressBarFlash";
             this.progressBarFlash.Size = new System.Drawing.Size(432, 31);
             this.progressBarFlash.TabIndex = 13;
@@ -217,7 +219,7 @@
             // labelFlashFile
             // 
             this.labelFlashFile.AutoSize = true;
-            this.labelFlashFile.Location = new System.Drawing.Point(44, 159);
+            this.labelFlashFile.Location = new System.Drawing.Point(34, 208);
             this.labelFlashFile.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelFlashFile.Name = "labelFlashFile";
             this.labelFlashFile.Size = new System.Drawing.Size(124, 25);
@@ -227,16 +229,16 @@
             // textBoxFlashFile
             // 
             this.textBoxFlashFile.Enabled = false;
-            this.textBoxFlashFile.Location = new System.Drawing.Point(164, 159);
-            this.textBoxFlashFile.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxFlashFile.Location = new System.Drawing.Point(158, 200);
+            this.textBoxFlashFile.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxFlashFile.Name = "textBoxFlashFile";
             this.textBoxFlashFile.Size = new System.Drawing.Size(908, 31);
             this.textBoxFlashFile.TabIndex = 15;
             // 
             // buttonBrowse
             // 
-            this.buttonBrowse.Location = new System.Drawing.Point(1096, 153);
-            this.buttonBrowse.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonBrowse.Location = new System.Drawing.Point(1094, 200);
+            this.buttonBrowse.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonBrowse.Name = "buttonBrowse";
             this.buttonBrowse.Size = new System.Drawing.Size(120, 40);
             this.buttonBrowse.TabIndex = 16;
@@ -248,7 +250,7 @@
             // 
             this.labelStatusText.AutoSize = true;
             this.labelStatusText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelStatusText.Location = new System.Drawing.Point(1748, 243);
+            this.labelStatusText.Location = new System.Drawing.Point(1748, 242);
             this.labelStatusText.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelStatusText.Name = "labelStatusText";
             this.labelStatusText.Size = new System.Drawing.Size(180, 37);
@@ -259,7 +261,7 @@
             // 
             this.labelStatus.AutoSize = true;
             this.labelStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelStatus.Location = new System.Drawing.Point(1932, 243);
+            this.labelStatus.Location = new System.Drawing.Point(1932, 242);
             this.labelStatus.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.labelStatus.Name = "labelStatus";
             this.labelStatus.Size = new System.Drawing.Size(28, 37);
@@ -269,7 +271,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(740, 461);
+            this.label2.Location = new System.Drawing.Point(738, 475);
             this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(116, 25);
@@ -280,7 +282,7 @@
             // 
             this.labelLoopPass.AutoSize = true;
             this.labelLoopPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLoopPass.Location = new System.Drawing.Point(1146, 391);
+            this.labelLoopPass.Location = new System.Drawing.Point(1144, 404);
             this.labelLoopPass.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelLoopPass.Name = "labelLoopPass";
             this.labelLoopPass.Size = new System.Drawing.Size(131, 31);
@@ -292,7 +294,7 @@
             // 
             this.labelLoopFail.AutoSize = true;
             this.labelLoopFail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLoopFail.Location = new System.Drawing.Point(1476, 391);
+            this.labelLoopFail.Location = new System.Drawing.Point(1474, 404);
             this.labelLoopFail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelLoopFail.Name = "labelLoopFail";
             this.labelLoopFail.Size = new System.Drawing.Size(117, 31);
@@ -302,8 +304,8 @@
             // 
             // buttonExportLog
             // 
-            this.buttonExportLog.Location = new System.Drawing.Point(134, 1202);
-            this.buttonExportLog.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonExportLog.Location = new System.Drawing.Point(134, 1259);
+            this.buttonExportLog.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonExportLog.Name = "buttonExportLog";
             this.buttonExportLog.Size = new System.Drawing.Size(160, 52);
             this.buttonExportLog.TabIndex = 22;
@@ -313,8 +315,8 @@
             // 
             // buttonClearLog
             // 
-            this.buttonClearLog.Location = new System.Drawing.Point(348, 1202);
-            this.buttonClearLog.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonClearLog.Location = new System.Drawing.Point(342, 1259);
+            this.buttonClearLog.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonClearLog.Name = "buttonClearLog";
             this.buttonClearLog.Size = new System.Drawing.Size(160, 52);
             this.buttonClearLog.TabIndex = 23;
@@ -325,26 +327,27 @@
             // labelTestplan
             // 
             this.labelTestplan.AutoSize = true;
-            this.labelTestplan.Location = new System.Drawing.Point(44, 100);
+            this.labelTestplan.Location = new System.Drawing.Point(34, 140);
             this.labelTestplan.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelTestplan.Name = "labelTestplan";
             this.labelTestplan.Size = new System.Drawing.Size(107, 25);
             this.labelTestplan.TabIndex = 24;
             this.labelTestplan.Text = "Testplan :";
+            this.labelTestplan.Click += new System.EventHandler(this.labelTestplan_Click);
             // 
             // textBoxTestplan
             // 
             this.textBoxTestplan.Enabled = false;
-            this.textBoxTestplan.Location = new System.Drawing.Point(164, 100);
-            this.textBoxTestplan.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxTestplan.Location = new System.Drawing.Point(158, 135);
+            this.textBoxTestplan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxTestplan.Name = "textBoxTestplan";
             this.textBoxTestplan.Size = new System.Drawing.Size(908, 31);
             this.textBoxTestplan.TabIndex = 25;
             // 
             // buttonTestplanBrowse
             // 
-            this.buttonTestplanBrowse.Location = new System.Drawing.Point(1096, 88);
-            this.buttonTestplanBrowse.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonTestplanBrowse.Location = new System.Drawing.Point(1094, 131);
+            this.buttonTestplanBrowse.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonTestplanBrowse.Name = "buttonTestplanBrowse";
             this.buttonTestplanBrowse.Size = new System.Drawing.Size(120, 42);
             this.buttonTestplanBrowse.TabIndex = 26;
@@ -360,7 +363,8 @@
             this.fileToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(2236, 40);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(6, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(2280, 40);
             this.menuStrip1.TabIndex = 27;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -379,12 +383,35 @@
             this.creditsToolStripMenuItem.Text = "Credits";
             this.creditsToolStripMenuItem.Click += new System.EventHandler(this.creditsToolStripMenuItem_Click);
             // 
+            // comboBoxFlasherType
+            // 
+            this.comboBoxFlasherType.FormattingEnabled = true;
+            this.comboBoxFlasherType.Location = new System.Drawing.Point(160, 67);
+            this.comboBoxFlasherType.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBoxFlasherType.Name = "comboBoxFlasherType";
+            this.comboBoxFlasherType.Size = new System.Drawing.Size(340, 33);
+            this.comboBoxFlasherType.TabIndex = 29;
+            this.comboBoxFlasherType.SelectedIndexChanged += new System.EventHandler(this.comboBoxFlasherType_SelectedIndexChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(32, 73);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(122, 25);
+            this.label3.TabIndex = 28;
+            this.label3.Text = "Chip Type :";
+            this.label3.Click += new System.EventHandler(this.flasherSelect_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(2236, 1275);
+            this.ClientSize = new System.Drawing.Size(2280, 1324);
+            this.Controls.Add(this.comboBoxFlasherType);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.buttonTestplanBrowse);
             this.Controls.Add(this.textBoxTestplan);
             this.Controls.Add(this.labelTestplan);
@@ -415,9 +442,10 @@
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "MainForm";
-            this.Text = "STM Flasher by SANTRONIX";
+            this.Text = "Chip Flasher 2.0 by SANTRONIX";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -457,6 +485,8 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem creditsToolStripMenuItem;
+        private System.Windows.Forms.ComboBox comboBoxFlasherType;
+        private System.Windows.Forms.Label label3;
     }
 }
 
