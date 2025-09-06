@@ -28,6 +28,10 @@ namespace STM_Flasher
         private Boolean stopLoop = false;
         private int failCount = 0;
         private int passCount = 0;
+        //Add New Flashers to below array
+        private string[] flasherTypes = { "STM32", "Nuvoton" };
+        //Array to hide Port Scan
+        private string[] hidePort = { "Nuvoton" };
 
         List<TestActivity> activities;
         public MainForm()
@@ -56,12 +60,16 @@ namespace STM_Flasher
             int loops = 0;
             elapsed = new TimeSpan();
             totalElapsed = new TimeSpan();
-            if (comboBoxPort.SelectedItem == null)
-            {
-                textBoxLog.AppendText($"Please select a COM port first.{Environment.NewLine}");
-                return;
-            }
 
+            if (comboBoxFlasherType.SelectedItem != null && !hidePort.Contains(comboBoxFlasherType.SelectedItem.ToString()))
+            {
+                if (comboBoxPort.SelectedItem == null)
+                {
+                    textBoxLog.AppendText($"Please select a COM port first.{Environment.NewLine}");
+                    return;
+                }
+            }
+                
             if (String.IsNullOrEmpty(textBoxFlashFile.Text))
             {
                 textBoxLog.AppendText($"Please select a Flash file port first.{Environment.NewLine}");
@@ -112,7 +120,15 @@ namespace STM_Flasher
             loopTimer.Interval = 1000;
             loopTimer.Tick += LoopTimer_Tick;
             loopTimer.Start();
-            string selectedPort = comboBoxPort.SelectedItem.ToString();
+            string selectedPort = "";
+            if (comboBoxFlasherType.SelectedItem != null && !hidePort.Contains(comboBoxFlasherType.SelectedItem.ToString()))
+            {
+                selectedPort = comboBoxPort.SelectedItem.ToString();
+            }
+            else
+            {
+                selectedPort = "";
+            }
 
             int loopCount = 1;
             if (checkBoxLoop.Checked)
@@ -131,7 +147,10 @@ namespace STM_Flasher
                 {
                     if (stopLoop)
                         break;
-                    textBoxLog.AppendText($"Starting flashing on {selectedPort}...{Environment.NewLine}");
+                    if (comboBoxFlasherType.SelectedItem != null && !hidePort.Contains(comboBoxFlasherType.SelectedItem.ToString()))
+                    {
+                        textBoxLog.AppendText($"Starting flashing on {selectedPort}...{Environment.NewLine}");
+                    }
                     Boolean error = false;
                     var executor = new CMD();
                     executor.OutputReceived += (s, ea) =>
@@ -155,7 +174,14 @@ namespace STM_Flasher
                     foreach(TestActivity ta in activities)
                     {
                         String command = ta.Command;
-                        command = command.Replace("{selectedPort}", selectedPort).Replace("{flashFile}", textBoxFlashFile.Text);
+                        if (comboBoxFlasherType.SelectedItem != null && !hidePort.Contains(comboBoxFlasherType.SelectedItem.ToString()))
+                        {
+                            command = command.Replace("{selectedPort}", selectedPort).Replace("{flashFile}", textBoxFlashFile.Text);
+                        }
+                        else
+                        {
+                            command = command.Replace("{flashFile}", textBoxFlashFile.Text);
+                        }
                         String testName = ta.Name;
                         textBoxLog.AppendText("#### COMMAND : " + command + $"{Environment.NewLine}");
 
@@ -361,6 +387,45 @@ namespace STM_Flasher
         private void creditsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Developed by : Santosh Ambekar (SANTRONIX)\n @SANTRONIX", "Credits", MessageBoxButtons.OK);
+        }
+
+        private void labelTestplan_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void flasherSelect_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            // Add types of flasher here
+            comboBoxFlasherType.Items.AddRange(flasherTypes);
+            comboBoxFlasherType.SelectedIndex = 0; //By default selects the first item
+        }
+        private void comboBoxFlasherType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            textBoxTestplan.Clear();
+            textBoxFlashFile.Clear();
+
+
+            string selectedItem = comboBoxFlasherType.SelectedItem.ToString();
+            //MessageBox.Show("You selected: " + selectedItem);
+
+            if (comboBoxFlasherType.SelectedItem != null && hidePort.Contains(comboBoxFlasherType.SelectedItem.ToString()))
+            {
+                labelPort.Visible = false;
+                comboBoxPort.Visible = false;
+                buttonScanPort.Visible = false;
+            }
+            else
+            {
+                labelPort.Visible = true;
+                comboBoxPort.Visible = true;
+                buttonScanPort.Visible = true;
+            }
         }
     }
 }

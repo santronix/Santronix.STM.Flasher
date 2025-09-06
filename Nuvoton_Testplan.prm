@@ -1,0 +1,27 @@
+<Tesplan>
+	<TestActivity>
+		<Id>1</Id>
+		<Name>CheckCLIVersion</Name>
+		<Command>NuLink_8051OT.exe -version</Command>
+	</TestActivity>
+	<!-- <TestActivity>
+		<Id>2</Id>
+		<Name>CheckPartNumber</Name>
+		<Command>NuLink_8051OT.exe -p</Command>
+	</TestActivity> -->
+	<TestActivity>
+		<Id>2</Id>
+		<Name>EraseAll</Name>
+		<Command>NuLink_8051OT.exe -e ALL</Command>
+	</TestActivity>
+	<TestActivity>
+		<Id>3</Id>
+		<Name>FlashAndVerify</Name>
+		<Command>NuLink_8051OT.exe -w APROM "{flashFile}" offset 0x0000</Command>
+	</TestActivity>
+	<TestActivity>
+		<Id>4</Id>
+		<Name>FlashAndVerify</Name>
+		<Command>NuLink_8051OT.exe -w CFG0 0xFD</Command>
+	</TestActivity>
+</Tesplan>
